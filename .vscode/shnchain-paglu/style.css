@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    color: #162d4f;
+    background: linear-gradient(#034a9b, #65a5ee);
+    text-align: center;
+    font-family: "Libre Caslon Text", Georgia, serif;
+    position: relative;
+    min-height: 100vh;
+}
+
+.sticker1 {
+    width: 100px;
+    position: absolute;
+    left: 35px;
+    top: 330px;
+    transform: rotate(-8deg);
+}
+
+.sticker2 {
+    width: 120px;
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    transform: rotate(-8deg);
+}
+
+.sticker3 {
+    width: 120px;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    transform: rotate(8deg);
+}
+
+.sticker4 {
+    width: 100px;
+    position: absolute;
+    right: 35px;
+    top: 330px;
+    transform: rotate(-8deg);
+}
+.sticker5 {
+    width: 100px;
+    position: absolute;
+    left: 30px;
+    top: 600px;
+    transform: rotate(-8deg)
+    
+}
+  
+
+video {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

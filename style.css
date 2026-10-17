@@ -1,0 +1,24 @@
+
+body {
+    background: linear-gradient(#e6f4ff, #ffffff);
+}
+
+
+header {
+    display : flex;
+    gap : 20px;
+    align-items : center;
+}
+#kuchupuchu{
+    width:600px;
+    align-items:center;
+}
+
+
+#kuchupuchu h1{
+    background-image: url('https://perfectday.com/wp-content/uploads/2022/01/social-share-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+}

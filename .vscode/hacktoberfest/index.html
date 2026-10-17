@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JoyBloom is a colourful AI-powered garden for discovering little joys.">
+    <title>JoyBloom ✿ Find Your Little Joy</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <div class="sticker sticker-top">🌈</div>
+    <div class="sticker sticker-side">🦋</div>
+    <div class="sticker sticker-bottom">🌼</div>
+
+    <header class="topbar" id="home">
+        <a class="logo" href="#home">🌷 JoyBloom<span>✿</span></a>
+
+        <nav>
+            <a href="#garden">Pick a Petal</a>
+            <a href="#ai-garden">AI Gardener</a>
+            <a href="#my-garden">My Garden</a>
+            <a href="#joy-jar">Joy Jar</a>
+        </nav>
+
+        <a class="nav-button" href="#ai-garden">Let's bloom ✨</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <span class="eyebrow">✿ YOUR LITTLE CORNER OF HAPPINESS ✿</span>
+
+                <h1>Life is better<br>with a little <span>joy!</span></h1>
+
+                <p>
+                    A tiny digital garden for big little feelings.
+                    Discover fun activities, spread kindness and
+                    collect flowers along the way. 🌸
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button primary" href="#garden">Explore the garden 🌷</a>
+                    <a class="button secondary" href="#ai-garden">Meet the AI ✨</a>
+                </div>
+
+                <div class="tiny-stats">
+                    <span>🌼 Little activities</span>
+                    <span>💗 Little kindness</span>
+                    <span>🌱 Little progress</span>
+                </div>
+            </div>
+
+            <div class="hero-art">
+                <span class="art-sticker sun">☀️</span>
+                <span class="art-sticker butterfly">🦋</span>
+                <span class="art-sticker star">⭐</span>
+                <span class="art-sticker cloud-one">☁️</span>
+                <span class="art-sticker cloud-two">☁️</span>
+
+                <div class="rainbow">🌈</div>
+
+                <div class="art-note">
+                    <span>♡</span>
+                    grow at<br>your own pace
+                </div>
+
+                <div class="hill hill-back"></div>
+                <div class="hill hill-front"></div>
+
+                <span class="garden-flower f1">🌼</span>
+                <span class="garden-flower f2">🌷</span>
+                <span class="garden-flower f3">🌸</span>
+                <span class="garden-flower f4">🌻</span>
+                <span class="garden-flower f5">🌺</span>
+                <span class="garden-flower f6">🌼</span>
+
+                <div class="tiny-sign">JOY GROWS HERE ✿</div>
+            </div>
+        </section>
+
+        <div class="ticker">
+            <span>🌷 MAKE SOMETHING</span>
+            <span>💌 SPREAD KINDNESS</span>
+            <span>🌱 TAKE A BREAK</span>
+            <span>✨ DISCOVER JOY</span>
+        </div>
+
+        <section class="section" id="garden">
+            <div class="section-heading">
+                <span class="eyebrow">🌸 PICK YOUR PETAL</span>
+                <h2>What sounds fun today?</h2>
+                <p>Choose a little corner and find your next tiny adventure.</p>
+                <span class="floating-doodle">✳</span>
+            </div>
+
+            <div class="petal-grid">
+                <button class="petal-card pink" data-petal="create">
+                    <span class="card-tape">✦ FUN TIME ✦</span>
+                    <span class="big-emoji">🎨</span>
+                    <span class="card-title">Create</span>
+                    <span class="card-description">Make something wonderfully random.</span>
+                    <span class="card-bottom">Let's make stuff ↗</span>
+                    <span class="mini-sticker">🌈</span>
+                </button>
+
+                <button class="petal-card yellow" data-petal="discover">
+                    <span class="card-tape">✦ CURIOUS? ✦</span>
+                    <span class="big-emoji">🔎</span>
+                    <span class="card-title">Discover</span>
+                    <span class="card-description">Learn a new fact or explore an idea.</span>
+                    <span class="card-bottom">Let's explore ↗</span>
+                    <span class="mini-sticker">⭐</span>
+                </button>
+
+                <button class="petal-card purple" data-petal="connect">
+                    <span class="card-tape">✦ KIND HEART ✦</span>
+                    <span class="big-emoji">💌</span>
+                    <span class="card-title">Connect</span>
+                    <span class="card-description">Share a little kindness with someone.</span>
+                    <span class="card-bottom">Spread some love ↗</span>
+                    <span class="mini-sticker">💗</span>
+                </button>
+
+                <button class="petal-card green" data-petal="recharge">
+                    <span class="card-tape">✦ SLOW DOWN ✦</span>
+                    <span class="big-emoji">🍃</span>
+                    <span class="card-title">Recharge</span>
+                    <span class="card-description">Pause, breathe and enjoy a quiet moment.</span>
+                    <span class="card-bottom">Take a little break ↗</span>
+                    <span class="mini-sticker">🦋</span>
+                </button>
+            </div>
+
+            <div class="activity-panel" id="petal-result" hidden>
+                <span class="panel-sticker">🎀</span>
+                <span class="eyebrow">YOUR LITTLE ADVENTURE</span>
+                <h3 id="petal-title">A tiny activity</h3>
+                <p id="petal-description"></p>
+                <p class="activity-time" id="petal-time"></p>
+                <button class="button primary" id="petal-complete">I did it! Collect a flower 🌷</button>
+                <p class="small-message" id="petal-status" role="status"></p>
+            </div>
+        </section>
+
+        <section class="ai-section" id="ai-garden">
+            <div class="section-heading">
+                <span class="eyebrow">🤖 SAY HELLO TO YOUR AI GARDENER</span>
+                <h2>A little joy, picked for you</h2>
+                <p>Tell us about your day and let JoyBloom help you find a small activity.</p>
+            </div>
+
+            <div class="ai-layout">
+                <div class="ai-decoration">
+                    <span class="ai-big-flower">🌷</span>
+                    <h3>Every day<br>can bloom differently.</h3>
+                    <p>No perfect day needed. Just one little step.</p>
+                    <span class="ai-cloud">☁️</span>
+                    <span class="ai-heart">💗</span>
+                    <span class="ai-sparkle">✧</span>
+                </div>
+
+                <div class="ai-box">
+                    <label for="mood">How has your day been?</label>
+                    <textarea id="mood" rows="4" maxlength="500"
+                        placeholder="Today I feel..."></textarea>
+
+                    <label for="energy">Your energy today</label>
+                    <select id="energy">
+                        <option value="low">🌙 Low — keep it gentle</option>
+                        <option value="medium" selected>🌷 Medium — something simple</option>
+                        <option value="high">☀️ High — let's explore</option>
+                    </select>
+
+                    <label for="time">How much time do you have?</label>
+                    <select id="time">
+                        <option value="5">⏰ 5 minutes</option>
+                        <option value="10" selected>⏰ 10 minutes</option>
+                        <option value="20">⏰ 20 minutes</option>
+                    </select>
+
+                    <button class="button primary full-button" id="suggest-button" type="button">
+                        Find my little joy ✨
+                    </button>
+
+                    <p id="ai-status" class="status" role="status" aria-live="polite">
+                        Your AI gardener is waiting 🌱
+                    </p>
+
+                    <div id="result" class="result" hidden>
+                        <span id="result-flower" class="result-flower">🌼</span>
+                        <h3 id="result-title">Your little joy</h3>
+                        <p id="result-text"></p>
+                        <p id="result-detail" class="result-detail"></p>
+                        <button class="button secondary" id="complete-button" type="button">
+                            I did it! 🌱
+                        </button>
+                    </div>
+
+                    <p class="privacy-note">
+                        The sentiment model is intended to run in your browser after its files load.
+                        It may misunderstand text and does not diagnose emotions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section garden-progress" id="my-garden">
+            <div class="section-heading">
+                <span class="eyebrow">🌱 LOOK HOW FAR YOU'VE GROWN</span>
+                <h2>Your very own happy garden</h2>
+                <p>Every completed activity adds a little bloom to your collection.</p>
+            </div>
+
+            <div class="personal-garden">
+                <div class="garden-score">
+                    <span class="score-icon">🌷</span>
+                    <span class="score-label">YOUR FLOWER COLLECTION</span>
+                    <strong id="flower-count">0</strong>
+                    <span>little blooms collected</span>
+                </div>
+
+                <div class="flower-bed">
+                    <span class="bed-sticker">🦋</span>
+                    <div id="my-flowers" class="my-flowers">
+                        <p id="empty-garden">Your garden is waiting to bloom. 🌱</p>
+                    </div>
+                </div>
+
+                <div class="garden-actions">
+                    <button class="button secondary" id="reset-garden" type="button">
+                        Start a fresh garden ↻
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section quest-section" id="daily-quest">
+            <div class="quest-card">
+                <span class="quest-sticker">⭐</span>
+                <span class="eyebrow">YOUR LITTLE DAILY QUEST</span>
+                <h2>One tiny thing, just for today</h2>
+                <p id="quest-text">Make something with your hands, even if it is just a tiny doodle.</p>
+                <button class="button primary" id="new-quest" type="button">Give me another quest 🎲</button>
+            </div>
+        </section>
+
+        <section class="section quick-section" id="quick-joy">
+            <div class="quick-card">
+                <span class="quick-sticker">☀️</span>
+                <span class="eyebrow">A LITTLE PAUSE</span>
+                <h2>Five minutes of lovely</h2>
+                <p>Need a tiny break? Let the joy jar pick a quick idea for you.</p>
+                <button class="button primary" id="quick-button" type="button">Surprise me! ✨</button>
+                <p id="quick-result" class="quick-result" role="status" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="section kindness-section" id="kindness">
+            <div class="kindness-card">
+                <span class="kindness-sticker">💌</span>
+                <span class="eyebrow">KINDNESS LOOKS GOOD ON YOU</span>
+                <h2>The kindness corner</h2>
+                <p id="kindness-prompt">Think of someone who helped you recently. Can you thank them?</p>
+                <button class="button secondary" id="kindness-button" type="button">Another kind idea 💗</button>
+            </div>
+        </section>
+
+        <section class="section joy-jar-section" id="joy-jar">
+            <div class="section-heading">
+                <span class="eyebrow">💌 SAVE THE GOOD STUFF</span>
+                <h2>Your little Joy Jar</h2>
+                <p>Save activities you want to try later. Your jar stays in this browser.</p>
+            </div>
+
+            <div class="jar-card">
+                <div class="jar-top">✿ MY HAPPY IDEAS ✿</div>
+                <label for="jar-note">Write a little idea to save</label>
+                <input id="jar-note" type="text" maxlength="120"
+                    placeholder="e.g. Draw a tiny flower...">
+                <button class="button primary" id="save-jar" type="button">Save to my jar 💗</button>
+                <p id="jar-status" class="small-message" role="status"></p>
+                <div id="jar-items" class="jar-items">
+                    <p id="empty-jar">Your jar is waiting for its first little idea. 🌷</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <span class="about-sticker">🌈</span>
+            <span class="eyebrow">A LITTLE NOTE FROM JOYBLOOM</span>
+            <h2>Technology can help us bloom.</h2>
+            <p>
+                JoyBloom is a small experiment in using AI for a positive purpose:
+                encouraging creativity, kindness and little moments away from endless scrolling.
+                You don't have to do everything. Just pick one little joy.
+            </p>
+            <p class="tech-note">Made with HTML, CSS, JavaScript and an open-weight AI model. ✿</p>
+        </section>
+    </main>
+
+    <footer>
+        <a class="logo" href="#home">🌷 JoyBloom</a>
+        <p>Little joys. Little steps. A garden of your own. ♡</p>
+        <a href="https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english"
+           target="_blank" rel="noopener noreferrer">Explore our AI model ↗</a>
+    </footer>
+</body>
+</html>
