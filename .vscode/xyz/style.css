@@ -1,0 +1,15 @@
+header {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-color: #e7f0ef;
+}
+background-image {
+    background-size: cover;
+    background-repeat: fixed;
+    background-position: center;
+}
